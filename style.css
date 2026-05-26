@@ -14,13 +14,12 @@ header{
     background-color: black;
     padding: 25px;
     text-align: center;
-    border-bottom: 5px solid red;
+    border-bottom: 3px solid yellow;
 }
 
 h1{
     color: yellow;
     font-size: 40px;
-    letter-spacing: 4px;
 }
 
 main{
@@ -31,15 +30,44 @@ main{
 }
 
 button{
-     background: linear-gradient(to right, yellow, rgb(255, 0, 0));
+    background: linear-gradient(45deg, yellow, orange);
     color: black;
     border: none;
     padding: 15px 30px;
-    font-family: fantasy;
-    font-size: 20px;
-    letter-spacing: 2px;
-    border-radius: 8px;
+    font-size: 18px;
+    border-radius: 10px;
     cursor: pointer;
     margin-bottom: 30px;
     transition: 0.3s;
+}
+
+button:hover{
+    transform: scale(1.05);
+}
+
+#output{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+#output div{
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: 15px;
+    border: 2px solid yellow;
+    transition: 0.3s;
+}
+
+#output div:hover{
+    transform: translateY(-5px);
+}
+
+#output h2{
+    color: yellow;
+    margin-bottom: 10px;
+}
+
+#output p{
+    margin: 5px 0;
 }

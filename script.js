@@ -5,17 +5,25 @@ async function getfech(url){
 }
 
 async function uj_info(){
+
     let data = await getfech(
-        "https://rawcdn.githack.com/akabab/starwars-api/0.2.1/api/all.json"
+        "https://starwars-databank-server.onrender.com/api/v1/vehicles"
     );
 
     let output = document.getElementById("output");
 
     output.innerHTML = "";
 
-    data.slice(0, 10).forEach(function(character){
+    data.data.forEach(function(vehicle){
+
         let div = document.createElement("div");
-        div.textContent = character.name;
+
+        div.innerHTML = `
+            <h2>${vehicle.name}</h2>
+            <p>Modell: ${vehicle.model}</p>
+            <p>Gyártó: ${vehicle.manufacturer}</p>
+        `;
+
         output.appendChild(div);
     });
 }
