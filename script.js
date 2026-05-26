@@ -11,17 +11,23 @@ function veletlen_szam(min, max) {
 async function uj_info(){
     console.log("megnyomódtam");
     
-    let data = await getch("https://onrender.com");
+
+    let data = await getch("https://starwars-databank-server.onrender.com/api/v1/vehicles");
     console.log(data);
     console.log("adat megérkezett és már ki is írtam");
     
+
     let jarmuvek = data.data;
+    
+
     let randomelem = veletlen_szam(0, jarmuvek.length - 1);
     
+
     faj.innerHTML = jarmuvek[randomelem].name;
     leir.innerHTML = jarmuvek[randomelem].description;
     kep.src = jarmuvek[randomelem].image;
 }
+
 
 const gomb = document.getElementById("gomb");
 const faj = document.getElementById("faj");
