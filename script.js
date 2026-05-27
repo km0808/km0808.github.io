@@ -29,8 +29,5 @@ async function uj_info(){
 }
 
 
-const faj = document.getElementById("faj");
-const kep = document.getElementById("kep");
-const leir = document.getElementById("leir");
 
 gomb.addEventListener("click", uj_info);
