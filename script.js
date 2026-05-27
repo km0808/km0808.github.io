@@ -29,7 +29,6 @@ async function uj_info(){
 }
 
 
-const gomb = document.getElementById("gomb");
 const faj = document.getElementById("faj");
 const kep = document.getElementById("kep");
 const leir = document.getElementById("leir");
